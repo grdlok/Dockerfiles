@@ -51,6 +51,9 @@ RUN git clone https://github.com/electerious/Lychee.git /www \
 EXPOSE 9000
 EXPOSE 80
 
+VOLUME /www/uploads
+VOLUME /www/data
+
 WORKDIR /
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/supervisord.conf"]
