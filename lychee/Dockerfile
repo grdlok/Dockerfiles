@@ -18,7 +18,7 @@ COPY ./nginx.conf ./
 COPY ./supervisord.conf ./
 
 RUN apk -U upgrade \
-    && apk add git nodejs nginx openrc supervisor php5 php5-fpm php5-json php5-zip php5-gd php5-exif
+    && apk add git nodejs nginx openrc supervisor php5 php5-fpm php5-json php5-zip php5-gd php5-exif php5-mysqli
 
 RUN sed -i "s|;listen.owner\s*=\s*nobody|listen.owner = ${PHP_FPM_USER}|g" /etc/php5/php-fpm.conf \
     && sed -i "s|;listen.group\s*=\s*nobody|listen.group = ${PHP_FPM_GROUP}|g" /etc/php5/php-fpm.conf \
