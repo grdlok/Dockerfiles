@@ -50,6 +50,8 @@ RUN git clone https://github.com/electerious/Lychee.git /www \
     && chmod -R 770 /www \
     && chmod -R 777 /var/tmp/nginx \
     && mkdir /var/tmp/nginx/client_body \
+    && mkdir /www/uploads/big \
+    && mkdir /www/uploads/thumb \
     && chmod -R 777 /var/tmp/nginx/client_body \
     && chmod -R 777 /www/uploads/ \
     && chmod -R 777 /www/data/
